@@ -1,0 +1,25 @@
+
+POST /article/add     									OK
+
+GET  /article/moderate/list								OK
+
+POST /article/moderate/approve							OK
+POST /article/moderate/reject							OK
+GET  /article/moderate/statistics						OK
+GET  /article/moderate/rejected							OK
+
+GET  /categories/list									OK
+
+GET  /article/browse/category?id=						OK
+GET  /article/browse/author?id=							OK
+
+GET  /article/find?text=XXX&category=XXX&authorId=XXX	OK
+
+GET  /payments/list
+POST /payments/approve
+
+
+//TODO
+reindexar
+remover artigos do índice
+estatísticas (nro de artigos cadastrados)

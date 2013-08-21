@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Biblioteca Nacional Moderar Artigo</title>
+		<link rel="stylesheet" type="text/css" href="../../bnmde.css">
+		<link rel="shortcut icon" href="../../favicon.ico" />
+		<script type="text/javascript" src="../common.js"></script>
+		<script type="text/javascript" src="moderate.js"></script>
+		<script type="text/javascript"
+				src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+  			_gaq.push(['_setAccount', 'UA-866073-6']);
+  			_gaq.push(['_trackPageview']);
+
+  			(function() {
+    			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  			})();
+		</script>
+	</head>
+	
+	<body onload="load();">
+		<div id="header">
+				<ul>
+					<li><a href="../../">Home</a></li>
+					<li><a href="../find/">Buscar</a></li>
+					<li><a href="../add/">Cadastrar</a></li>
+					<li><a href="#">Moderar</a></li>
+					<li><a href="../browse/">Cartilha</a></li>
+				</ul>	
+
+		</div>
+		
+		<div id="fundo">
+				<h4>Moderar Artigos:</h4>
+				<div id="form">
+					<div id='statistics'>Carregando estatísticas...</div>
+					<div id='loading'>Carregando artigos...</div>
+					<div id='list'></div>
+				</div>
+		</div>
+
+	</body>
+</html>

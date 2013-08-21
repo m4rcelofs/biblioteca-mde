@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Biblioteca Nacional Cadastrar Artigo</title>
+		<link rel="stylesheet" type="text/css" href="../../bnmde.css">
+		<link rel="shortcut icon" href="../../favicon.ico" />
+		<script type="text/javascript" src="add.js"></script>
+		<script type="text/javascript"
+				src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
+				
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+  			_gaq.push(['_setAccount', 'UA-866073-6']);
+  			_gaq.push(['_trackPageview']);
+
+  			(function() {
+    			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  			})();
+		</script>
+	</head>
+	
+	<body>
+		<div id="header">
+				<ul>
+					<li><a href="../../">Home</a></li>
+					<li><a href="../find/">Buscar</a></li>
+					<li><a href="#">Cadastrar</a></li>
+					<li><a href="../moderate/">Moderar</a></li>
+					<li><a href="../browse/">Cartilha</a></li>
+				</ul>	
+
+		</div>
+		
+		<div id="fundo">
+				<h4>Cadastrar Artigo:</h4>
+				<div id="form">
+					<form id="addArticle" onsubmit="return false;" action="../add" method="post">
+						<fieldset class="input">
+							<label for="articleId" class="input">ID do Artigo:</label>						
+							<input type="number" name="articleId" value="ID é o número do artigo" class="info" /> <br />
+							<label for="userId" class="input">Sua ID:</label>						
+							<input type="number" min='10000' max='9999999' name="userId" value="ID é o número do perfil" class="info" /> <br />
+
+							<p>Categoria:</p>
+							<input type="radio" name="categoryId" value="4" />
+								<label for="4">Humor</label>	
+							<input type="radio" name="categoryId" value="1003" />
+								<label for="1003">Política</label>		
+							<input type="radio" name="categoryId" value="1004" />
+								<label for="1004">Internacional</label>			
+							<input type="radio" name="categoryId" value="2003" />
+								<label for="2003">Interação</label> <br />
+							<input type="radio" name="categoryId" value="4004" />
+								<label for="4004">Militar</label> 
+							<input type="radio" name="categoryId" value="4005" />
+								<label for="4005">Diplomacia / Alianças</label> 
+							<input type="radio" name="categoryId" value="6006" />
+								<label for="6006">Tutorial</label> <br />
+							<input type="radio" name="categoryId" value="8003" />
+								<label for="8003">Economia</label> 
+							<input type="radio" name="categoryId" value="15001" />
+								<label for="15001">Governo</label> 
+							<input type="radio" name="categoryId" value="16001" />
+								<label for="16001">Roleplay</label> 
+							
+							<p>Descrição ou palavras-chave:</p>
+							<textarea rows="2" cols="40" name="description"></textarea>
+							<input type="submit" value="Enviar" onclick="add();"/> <br />
+						</fieldset>
+					</form>
+				</div>
+		</div>
+
+	</body>
+</html>

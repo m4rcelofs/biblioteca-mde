@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>Biblioteca Nacional Buscar Artigo</title>
+		<link rel="stylesheet" type="text/css" href="bnmde.css" />
+	</head>
+	
+	<body>
+		<div id="header">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="buscar.html">Buscar</a></li>
+					<li><a href="cadastrar.html">Cadastrar</a></li>
+					<li><a href="moderar.html">Moderar</a></li>
+					<li><a href="estatisticas.html">Estatísticas</a></li>
+					<li><a href="cartilha.html">Cartilha</a></li>
+				</ul>	
+
+		</div>
+		
+		<div id="fundo">
+				<h4>Buscar Artigo:</h4>
+				<div id="form">
+					<form name="buscar" action="/categories/list" method="get">
+						<fieldset class="input">
+							<label for="subject" class="input">Assunto:</label>						
+							<input type="text" name="subject" class="info" /> <br />
+							<label for="tag" class="input">Tag:</label>						
+							<input type="text" name="tag"  class="info" /> <br />
+							<label for="authorId" class="input">Autor:</label>						
+							<input type="text" name="authorId"  class="info" /> <br />
+
+							<p>Categoria:</p>
+							<input type="radio" name="categoryId" value="n4" />
+								<label for="n4">Humor</label>	
+							<input type="radio" name="categoryId" value="n1003" />
+								<label for="n1003">Política</label>		
+							<input type="radio" name="categoryId" value="n1004" />
+								<label for="n1004">Internacional</label>			
+							<input type="radio" name="categoryId" value="n2003" />
+								<label for="n2003">Interação</label> <br />
+							<input type="radio" name="categoryId" value="n4004" />
+								<label for="n4004">Militar</label> 
+							<input type="radio" name="categoryId" value="n4005" />
+								<label for="n4005">Diplomacia / Alianças</label> 
+							<input type="radio" name="categoryId" value="n6006" />
+								<label for="n6006">Tutorial</label> <br />
+							<input type="radio" name="categoryId" value="n8003" />
+								<label for="n8003">Economia</label> 
+							<input type="radio" name="categoryId" value="n6007" />
+								<label for="n6007">Governo</label> 
+							<input type="radio" name="categoryId" value="n9003" />
+								<label for="n9003">Roleplay</label> <br />
+							<p>	<input type="submit" value="Buscar" /> </p>
+						</fieldset>
+					</form>
+				</div>
+		</div>
+
+	</body>
+</html>

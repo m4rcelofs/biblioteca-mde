@@ -1,0 +1,100 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+#header {
+	width:550px;
+	height:118px;
+	background-image:url("img/cabecalho_bn.png");
+}
+
+#fundo {
+	width:550px;
+	height:405px;
+	background-image: url("img/biblioteca_padrao.jpg");
+} 
+
+a {
+	color:ffcc33;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline overline;
+}
+
+a:active  {
+	font-weight:bold;
+}
+
+h4 {
+	margin:0;
+	font: arial;
+	padding-top:38px;
+	padding-left:134px;
+}
+
+form {
+	border:0;
+	outline:none;
+}
+
+#form {
+	width:388px;
+	height:262px;
+	margin-top:25px;
+	margin-left:122px;
+	/*background:#FCFCFC;*/
+	}
+
+#form p {
+	font: 14px arial, sans-serif;
+	font-weight: bold;
+} 
+
+#texto {
+	width:370px;
+	height:250px;
+	margin-left:122px;
+	margin-top:30px;
+	padding-left:10px;
+	font: 14px sans-serif;
+	color:#06567C;
+	line-height:20px; 
+	text-align:justify;
+}
+
+label {
+    font: 12px arial; 
+	color:black;
+	
+}
+
+.input {
+	font: 14px arial;
+	font-weight: bold;
+	color:#06567C;
+
+} 
+
+fieldset {
+	border:none;
+}
+
+.info {
+	font: 12px arial;
+	color: #686868;
+}
+
+ul, li {
+	float:left;
+	list-style-type:none;
+	font: arial helvetica;
+	font-size:15px;
+	color:#ffcc33;
+	padding-top:37px;
+	padding-left:10px;
+}
+
+

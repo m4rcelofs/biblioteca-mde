@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- facade servlets -->
+	<servlet>
+		<servlet-name>addArticle</servlet-name>
+		<servlet-class>erep.mde.facade.AddArticleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addArticle</servlet-name>
+		<url-pattern>/article/add</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>browseCategory</servlet-name>
+		<servlet-class>erep.mde.facade.BrowseCategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>browseCategory</servlet-name>
+		<url-pattern>/article/browse/category</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>browseAuthor</servlet-name>
+		<servlet-class>erep.mde.facade.BrowseAuthorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>browseAuthor</servlet-name>
+		<url-pattern>/article/browse/author</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>search</servlet-name>
+		<servlet-class>erep.mde.facade.SearchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>search</servlet-name>
+		<url-pattern>/article/find</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>getCategories</servlet-name>
+		<servlet-class>erep.mde.facade.CategoriesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getCategories</servlet-name>
+		<url-pattern>/categories/list</url-pattern>
+	</servlet-mapping>
+
+	<!-- mod servlets -->
+
+	<servlet>
+		<servlet-name>moderationList</servlet-name>
+		<servlet-class>erep.mde.facade.mod.ModerationListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>moderationList</servlet-name>
+		<url-pattern>/article/moderate/list</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>aproveArticle</servlet-name>
+		<servlet-class>erep.mde.facade.mod.ApprovalServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>aproveArticle</servlet-name>
+		<url-pattern>/article/moderate/approve</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>rejectArticle</servlet-name>
+		<servlet-class>erep.mde.facade.mod.RejectionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>rejectArticle</servlet-name>
+		<url-pattern>/article/moderate/reject</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>statisticsServlet</servlet-name>
+		<servlet-class>erep.mde.facade.mod.QueueStatisticsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>statisticsServlet</servlet-name>
+		<url-pattern>/article/moderate/statistics</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>rejectedServlet</servlet-name>
+		<servlet-class>erep.mde.facade.mod.RejectedServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>rejectedServlet</servlet-name>
+		<url-pattern>/article/moderate/rejected</url-pattern>
+	</servlet-mapping>
+
+	<!-- payment servlets -->
+	<servlet>
+		<servlet-name>paymentList</servlet-name>
+		<servlet-class>erep.mde.facade.payment.ListPaymentsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>paymentList</servlet-name>
+		<url-pattern>/payments/list</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>approvePayment</servlet-name>
+		<servlet-class>erep.mde.facade.payment.ApprovalPaymentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>approvePayment</servlet-name>
+		<url-pattern>/payments/approve</url-pattern>
+	</servlet-mapping>
+
+	<!-- task servlets -->
+	<servlet>
+		<servlet-name>fetchUserTask</servlet-name>
+		<servlet-class>erep.mde.tasks.FetchUserTask</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>fetchUserTask</servlet-name>
+		<url-pattern>/admin/fetch/user</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>fetchArticleTask</servlet-name>
+		<servlet-class>erep.mde.tasks.FetchArticleTask</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>fetchArticleTask</servlet-name>
+		<url-pattern>/admin/fetch/article</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- filters -->
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>erep.mde.facade.mod.LoginFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/article/moderate/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/payments/*</url-pattern>
+	</filter-mapping>
+
+	<!-- security constraints -->
+
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/article/moderate/*</url-pattern>
+			<url-pattern>/payments/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/admin/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value/>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+</web-app>

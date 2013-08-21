@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Biblioteca Nacional Cartilha</title>
+		<link rel="stylesheet" type="text/css" href="../../bnmde.css">
+		<link rel="shortcut icon" href="../../favicon.ico" />
+		<script type="text/javascript" src="../common.js"></script>
+		<script type="text/javascript" src="browse.js"></script>
+		<script type="text/javascript"
+				src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+  			_gaq.push(['_setAccount', 'UA-866073-6']);
+  			_gaq.push(['_trackPageview']);
+
+  			(function() {
+    			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  			})();
+		</script>
+	</head>
+	
+	<body>
+		<div id="header">
+				<ul>
+					<li><a href="../../">Home</a></li>
+					<li><a href="../find/">Buscar</a></li>
+					<li><a href="../add/">Cadastrar</a></li>
+					<li><a href="../moderate/">Moderar</a></li>
+					<li><a href="#">Cartilha</a></li>
+				</ul>	
+
+		</div>
+		
+		<div id="fundo">
+				<h4>Cartilha</h4>
+				<div id="texto">
+					<p>
+						Aqui você poderá buscar todos os tutoriais lançados pelo Ministério da Educação. 
+					</p>
+					<p>
+						Escolha a categoria de artigo que você quer buscar e clique no botão abaixo. <br />
+					</p>
+
+						<ul>
+							<li><a href="#" onclick="loadCat(4);">Humor</a></li>
+							<li><a href="#" onclick="loadCat(1003);">Política</a></li>
+							<li><a href="#" onclick="loadCat(1004);">Internacional</a></li>
+							<li><a href="#" onclick="loadCat(2003);">Interação</a></li>
+							<li><a href="#" onclick="loadCat(4004);">Militar</a></li>
+							<li><a href="#" onclick="loadCat(4005);">Diplomacia / Alianças</a></li>
+							<li><a href="#" onclick="loadCat(6006);">Tutorial</a></li>
+							<li><a href="#" onclick="loadCat(8003);">Economia</a></li>
+							<li><a href="#" onclick="loadCat(15001);">Governo</a></li>
+							<li><a href="#" onclick="loadCat(16001);">Roleplay</a></li>
+						</ul>			
+				</div>
+				<div id='results'></div>
+		</div>
+
+	</body>
+</html>

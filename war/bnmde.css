@@ -1,0 +1,94 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+#header {
+	width:714px;
+	height:144px;
+	background:url("img/cabecalho_biblioteca.png") no-repeat;
+}
+
+#fundo {
+	width:714px;
+	height:526px;
+	background: url("img/biblioteca.png") no-repeat;
+} 
+
+a {
+	color:#ffcc33;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline overline;
+}
+
+a:active  {
+	font-weight:bold;
+}
+
+h4 {
+	margin:0;
+	font-family: Arial, Geneva, Verdana, Helvetica, sans-serif;
+	padding-top: 55px;
+	padding-left:170px;
+}
+
+#form {
+	width:488px;
+	height:262px;
+	margin-top:35px;
+	margin-left:160px;
+	/*background:#FCFCFC;*/
+	}
+
+#form p {
+	font: 14px arial, sans-serif;
+	font-weight: bold;
+} 
+
+#texto {
+	width:488px;
+	height:250px;
+	margin-left:160px;
+	margin-top:40px;
+	padding-left:10px;
+	font: 14px sans-serif;
+	color:#06567C;
+	line-height:20px; 
+	text-align:justify;
+}
+
+label {
+    font: 12px arial; 
+	color:black;
+	
+}
+
+.input {
+	font: 14px arial;
+	font-weight: bold;
+	color:#06567C;
+} 
+
+fieldset {
+	border:none;
+}
+
+.info {
+	font: 12px arial;
+	color: #686868;
+}
+
+ul, li {
+	float:left;
+	list-style-type:none;
+	font-family: arial, helvetica;
+	font-size:15px;
+	color:#ffcc33;
+	padding-top:50px;
+	padding-left:20px;
+}
+
+
